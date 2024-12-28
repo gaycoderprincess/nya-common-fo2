@@ -28,9 +28,71 @@ public:
 	};
 	static_assert(sizeof(tPreRace) == 0x4AC-0x464);
 
+	struct tPostRace {
+		int nResult; // +4C0
+		uint32_t nPlayerPosition[8]; // +4C4
+		uint32_t nPlayerVisualPosition[8]; // +4E4
+		uint32_t nRacePoints[8]; // +504
+		uint32_t nFinishTime[8]; // +524
+		uint32_t nFastestLapTime[8]; // +544
+		uint32_t nBestWreckerId; // +564
+		uint32_t nBlastMasterId; // +568
+		uint32_t nFastestLapId; // +56C
+		uint32_t nDareDevilId; // +570
+		uint32_t nDerbyDamagePoints[8]; // +574
+		uint32_t nDerbyWreckPoints[8]; // +594
+		uint32_t nDerbyRankPoints[8]; // +5B4
+		uint32_t nStuntFinalScore[8]; // +5D4
+	};
+	static_assert(sizeof(tPostRace) == 0x5F4-0x4C0);
+
+	struct tAwards {
+		int nAwardCar; // +814
+		int nNumUnlockCar; // +818
+		int aUnlockCar[12]; // +81C
+		int nUnlockClass; // +84C
+		int nUnlockSubClass; // +850
+		int nUnlockEvent; // +854
+		int nUnlockProfile; // +858
+		int nUnlockFinals; // +85C
+		int nFinalCompleted; // +860
+		int nOMGGameCompletedGratzDING; // +864
+		int nRaceWinnings; // +868
+		uint8_t _86C[0x1C];
+		int nCupWinnings; // +888
+		uint8_t _88C[0x1C];
+		int nClassWinnings; // +8A8
+		int nSubClassWinnings; // +8AC
+		int nCrashWinnings; // +8B0
+		int nSuperFlip; // +8B4
+		int nWhammo; // +8B8
+		int nPowerHit; // +8BC
+		int nBlastOut; // +8C0
+		int nWrecked; // +8C4
+		int nRagdolled; // +8C8
+		int nBigAir; // +8CC
+		int nNumSuperFlip; // +8D0
+		int nNumWhammo; // +8D4
+		int nNumPowerHit; // +8D8
+		int nNumBlastOut; // +8DC
+		int nNumWrecked; // +8E0
+		int nNumRagdolled; // +8E4
+		int nNumBigAir; // +8E8
+		int nBestWrecker; // +8EC
+		int nBlastMaster; // +8F0
+		int nFastestLap; // +8F4
+		int nDareDevil; // +8F8
+		int nTotalCashAwarded; // +8FC
+	};
+	static_assert(sizeof(tAwards) == 0x900-0x814);
+
 	uint8_t _0[0x464];
 	tPreRace PreRace;
-	uint8_t _4AC[0x50C];
+	uint8_t _4AC[0x14];
+	tPostRace PostRace;
+	uint8_t _5F4[0x220];
+	tAwards Awards; // +814
+	uint8_t _900[0xB8];
 	PlayerHost* pHost; // +9B8
 	uint8_t _9BC[0xC];
 	MenuInterface* pMenuInterface; // +9C8
