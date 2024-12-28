@@ -4,7 +4,10 @@ enum ePlayerEvent {
 
 class Player {
 public:
-	uint8_t _4[0x328];
+	uint8_t _4[0x2CC];
+	uint32_t nArrowColor; // +2D0
+	uint32_t nArrowColorId; // +2D4
+	uint8_t _2D8[0x54];
 	Controller* pController; // +32C
 	uint8_t _330[0xC];
 	Car* pCar; // +33C

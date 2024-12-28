@@ -24,3 +24,5 @@
 #include "fo2hooks.h"
 
 auto& pLoadingScreen = *(void**)0x8E8448;
+
+auto gPalette = (uint32_t*)0x9298B70;
