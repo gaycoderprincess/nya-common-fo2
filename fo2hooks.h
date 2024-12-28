@@ -1,3 +1,5 @@
+#include <vector>
+
 namespace NyaFO2Hooks {
 	std::vector<void(*)()> aEndSceneFuncs;
 	std::vector<void(*)()> aD3DResetFuncs;

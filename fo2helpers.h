@@ -1,3 +1,5 @@
+#include <format>
+
 int GetNumCars() {
 	return GetLiteDB()->GetTable("FlatOut2.Cars")->GetPropertyArraySize("Car");
 }

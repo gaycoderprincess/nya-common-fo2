@@ -8,7 +8,9 @@
 #include "types/PlayerProfile.h"
 #include "types/LUA.h"
 #include "types/LiteDb.h"
+#ifndef NYA_COMMON_NO_D3D
 #include "types/Font.h"
+#endif
 #include "types/ScoreManager.h"
 #include "types/GameFlow.h"
 

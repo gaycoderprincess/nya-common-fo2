@@ -5,6 +5,15 @@ public:
 	uint8_t _41[0x83];
 };
 
+class Suspension {
+public:
+	float fBumpDamp; // +0
+	float fReboundDamp; // +4
+	uint8_t _8[0x24];
+	float fHealth; // +2C
+	uint8_t _30[0x10];
+};
+
 class Player;
 class Car {
 public:
@@ -19,7 +28,15 @@ public:
 	float fNitro;				// +5CC
 	uint8_t _5D0[0x24];
 	Gearbox mGearbox;			// +5F4
-	uint8_t _6B8[0x173C];
+	uint8_t _6B8[0x11D8];
+	Suspension aSuspension[4]; // +1890
+	uint8_t _1990[0x3A8];
+	float fSuspensionFrontBumpDamp; // +1D38
+	float fSuspensionFrontReboundDamp; // +1D3C
+	uint8_t _1D40[0x3C];
+	float fSuspensionRearBumpDamp; // +1D7C
+	float fSuspensionRearReboundDamp; // +1D80
+	uint8_t _1D84[0x70];
 	float fGasPedal;			// +1DF4
 	float fBrakePedal;			// +1DF8
 	float fNitroButton;			// +1DFC
