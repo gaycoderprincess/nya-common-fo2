@@ -14,6 +14,11 @@ public:
 	uint8_t _30[0x10];
 };
 
+class tTextureNode {
+public:
+	DevTexture* pTexture;
+};
+
 class Player;
 class Car {
 public:
@@ -30,7 +35,10 @@ public:
 	Gearbox mGearbox;					// +5F4
 	uint8_t _6B8[0x11D8];
 	Suspension aSuspension[4];			// +1890
-	uint8_t _1990[0x310];
+	uint8_t _1990[0x28C];
+	tTextureNode** pTextureNodes;		// +1C1C
+	tTextureNode** pTextureNodesEnd;	// +1C20
+	uint8_t _1C24[0x7C];
 	uint32_t nHandsId;					// +1CA0
 	uint8_t _1CA4[0x94];
 	float fSuspensionFrontBumpDamp;		// +1D38
@@ -46,7 +54,12 @@ public:
 	float fSteerAngle;					// +1E04
 	uint8_t _1E08[0xC88];
 	uint32_t _driverStruct;				// +2A90
-	uint8_t _2A94[0x1BA8];
+	uint8_t _2A94[0x1B00];
+	DevTexture* pSkinDamaged;			// +4594
+	DevTexture* pLightsDamaged;			// +4598
+	DevTexture* pLightsGlow;			// +459C
+	DevTexture* pLightsGlowLit;			// +45A0
+	uint8_t _45A4[0x98];
 	Player* pPlayer;					// +463C
 	uint8_t _4640[0x2460];
 	float fDamage;						// +6AA0
