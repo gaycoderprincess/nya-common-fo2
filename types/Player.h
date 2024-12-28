@@ -10,7 +10,10 @@ public:
 	Car* pCar;					// +33C
 	uint32_t nCarId;			// +340
 	uint32_t nCarSkinId;		// +344
-	uint8_t _348[0x20];
+	uint8_t _348[0x4];
+	uint32_t nCharacterTypeId;	// +34C
+	uint32_t nCharacterSkinId;	// +350
+	uint8_t _354[0x14];
 	uint32_t nPlayerId;			// +368
 	uint8_t _36C[0x8];
 	uint32_t nStagingEngineRev;	// +374
@@ -51,5 +54,6 @@ public:
 	int nCharType; // +34
 	int nPeerId; // +38
 	int nNetworkId; // +3C
-	uint8_t _40[0x10]; // +40
+	int nPrimary; // +40
 };
+static_assert(sizeof(PlayerInfo) == 0x44);
