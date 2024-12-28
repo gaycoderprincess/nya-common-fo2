@@ -1,13 +1,13 @@
 class DevTexture {
 public:
 	uint8_t _0[0x14];
-	void* pSomePtr;					// +14
+	void* pSomePtr; // +14
 	uint8_t _18[0x8];
-	char* sPath;					// +20
+	char* sPath; // +20
 	uint8_t _24[0x10];
-	uint32_t nPathLength;			// +34
+	uint32_t nPathLength; // +34
 	uint8_t _38[0x18];
-	PDIRECT3DTEXTURE9 pD3DTexture;	// +50
+	PDIRECT3DTEXTURE9 pD3DTexture; // +50
 };
 
 class DeviceD3d {

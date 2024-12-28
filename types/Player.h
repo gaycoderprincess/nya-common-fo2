@@ -5,20 +5,20 @@ enum ePlayerEvent {
 class Player {
 public:
 	uint8_t _4[0x328];
-	Controller* pController;	// +32C
+	Controller* pController; // +32C
 	uint8_t _330[0xC];
-	Car* pCar;					// +33C
-	uint32_t nCarId;			// +340
-	uint32_t nCarSkinId;		// +344
+	Car* pCar; // +33C
+	uint32_t nCarId; // +340
+	uint32_t nCarSkinId; // +344
 	uint8_t _348[0x4];
-	uint32_t nCharacterTypeId;	// +34C
-	uint32_t nCharacterSkinId;	// +350
+	uint32_t nCharacterTypeId; // +34C
+	uint32_t nCharacterSkinId; // +350
 	uint8_t _354[0x14];
-	uint32_t nPlayerId;			// +368
+	uint32_t nPlayerId; // +368
 	uint8_t _36C[0x8];
-	uint32_t nStagingEngineRev;	// +374
+	uint32_t nStagingEngineRev; // +374
 	uint8_t _378[0x324];
-	uint32_t nSomeFlags;		// +69C
+	uint32_t nSomeFlags; // +69C
 
 	virtual void _vf0() = 0;
 	virtual void _vf1() = 0;

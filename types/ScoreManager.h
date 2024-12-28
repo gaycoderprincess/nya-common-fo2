@@ -1,9 +1,9 @@
 class PlayerScoreRace {
 public:
 	uint8_t _0[0x4];
-	uint32_t nPlayerId; // 4
+	uint32_t nPlayerId; // +4
 	uint8_t _8[0x3C];
-	uint32_t nCurrentLap; // 44
+	uint32_t nCurrentLap; // +44
 };
 
 class ScoreManager {

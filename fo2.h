@@ -1,3 +1,5 @@
+#include <d3d9.h>
+
 #include "scriptenums.h"
 #include "languages.h"
 #include "fo2math.h"
