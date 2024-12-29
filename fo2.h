@@ -19,6 +19,7 @@
 #include "types/GameFlow.h"
 #include "types/Application.h"
 #include "types/Language.h"
+#include "types/EventManager.h"
 
 #include "fo2helpers.h"
 #include "fo2hooks.h"
@@ -26,3 +27,6 @@
 auto& pLoadingScreen = *(void**)0x8E8448;
 
 auto gPalette = (uint32_t*)0x9298B70;
+
+auto& pGameFilesChecksum1 = *(uint8_t**)0x8D7800; // uint8_t[20]
+auto& pGameFilesChecksum2 = *(uint8_t**)0x8D77FC; // uint8_t[41]

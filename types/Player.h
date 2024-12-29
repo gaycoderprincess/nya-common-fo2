@@ -1,6 +1,4 @@
-enum ePlayerEvent {
-	PLAYEREVENT_RESPAWN_GHOST = 6036,
-};
+struct tEventData;
 
 class Player {
 public:
@@ -20,7 +18,9 @@ public:
 	uint32_t nPlayerId; // +368
 	uint8_t _36C[0x8];
 	uint32_t nStagingEngineRev; // +374
-	uint8_t _378[0x324];
+	uint8_t _378[0x168];
+	uint32_t nGhosting; // +4E0
+	uint8_t _4E4[0x1B8];
 	uint32_t nSomeFlags; // +69C
 
 	virtual void _vf0() = 0;
@@ -43,7 +43,7 @@ public:
 	virtual void _vf17() = 0;
 	virtual void _vf18() = 0;
 	virtual void _vf19() = 0;
-	virtual void TriggerEvent(int* properties) = 0;
+	virtual void TriggerEvent(tEventData* properties) = 0;
 };
 
 class PlayerInfo {
