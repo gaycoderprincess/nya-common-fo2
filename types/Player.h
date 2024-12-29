@@ -18,7 +18,14 @@ public:
 	uint32_t nPlayerId; // +368
 	uint8_t _36C[0x8];
 	uint32_t nStagingEngineRev; // +374
-	uint8_t _378[0x168];
+	uint8_t _378[0x4];
+	uint32_t nIsWrecked; // +37C
+	uint8_t _380[0x30];
+	int32_t nRaceTime; // +3B0
+	uint8_t _3B4[0xD0];
+	uint32_t nCurrentSplit; // +484
+	uint32_t nCurrentLap; // +488
+	uint8_t _48C[0x54];
 	uint32_t nGhosting; // +4E0
 	uint8_t _4E4[0x1B8];
 	uint32_t nSomeFlags; // +69C

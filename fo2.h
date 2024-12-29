@@ -4,6 +4,8 @@
 #include "languages.h"
 #include "fo2math.h"
 
+#include "types/FO2String.h"
+#include "types/FO2Vector.h"
 #include "types/Controller.h"
 #include "types/LUA.h"
 #include "types/LiteDb.h"
@@ -20,6 +22,7 @@
 #include "types/Application.h"
 #include "types/Language.h"
 #include "types/EventManager.h"
+#include "types/GameSettings.h"
 
 #include "fo2helpers.h"
 #include "fo2hooks.h"

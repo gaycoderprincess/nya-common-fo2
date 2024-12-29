@@ -3,6 +3,13 @@ public:
 	uint8_t _0[0x14];
 	Player** aPlayers;
 };
+auto& pPlayerHost = *(PlayerHost**)0x696DC8;
+
+enum eGameState {
+	GAME_STATE_NONE,
+	GAME_STATE_MENU,
+	GAME_STATE_RACE
+};
 
 class GameFlow {
 public:
@@ -86,8 +93,10 @@ public:
 	};
 	static_assert(sizeof(tAwards) == 0x900-0x814);
 
-	uint8_t _0[0x464];
-	tPreRace PreRace;
+	uint8_t _0[0x458];
+	uint32_t nGameState; // +458
+	uint8_t _45C[0x8];
+	tPreRace PreRace; // +464
 	uint8_t _4AC[0x14];
 	tPostRace PostRace;
 	uint8_t _5F4[0x220];
