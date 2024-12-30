@@ -30,7 +30,7 @@
 
 auto& pLoadingScreen = *(void**)0x8E8448;
 
-auto gPalette = (uint32_t*)0x9298B70;
+auto gPalette = (uint32_t*)0x8DD040;
 
 auto& pGameFilesChecksum1 = *(uint8_t**)0x8D7800; // uint8_t[20]
 auto& pGameFilesChecksum2 = *(uint8_t**)0x8D77FC; // uint8_t[41]

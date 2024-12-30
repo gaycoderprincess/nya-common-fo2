@@ -1,7 +1,13 @@
 class PlayerHost {
 public:
 	uint8_t _0[0x14];
-	Player** aPlayers;
+	FO2Vector<Player*> aPlayers; // +14
+	uint8_t _20[0x2085C];
+	int32_t nRaceTime; // +2087C
+
+	int GetNumPlayers() {
+		return aPlayers.GetSize();
+	}
 };
 auto& pPlayerHost = *(PlayerHost**)0x696DC8;
 
@@ -116,9 +122,8 @@ auto& pGameFlow = *(GameFlow**)0x8E8410;
 Player* GetPlayer(int id) {
 	auto host = pGameFlow->pHost;
 	if (!host) return nullptr;
-	auto players = host->aPlayers;
-	if (!players) return nullptr;
-	auto ply = players[id];
+	if (id < 0 || id >= host->aPlayers.GetSize()) return nullptr;
+	auto ply = host->aPlayers[id];
 	if (!ply || !ply->pCar) return nullptr;
 	return ply;
 }
