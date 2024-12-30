@@ -70,10 +70,8 @@ public:
 		int nUnlockFinals; // +85C
 		int nFinalCompleted; // +860
 		int nOMGGameCompletedGratzDING; // +864
-		int nRaceWinnings; // +868
-		uint8_t _86C[0x1C];
-		int nCupWinnings; // +888
-		uint8_t _88C[0x1C];
+		int nRaceWinnings[8]; // +868
+		int nCupWinnings[8]; // +888
 		int nClassWinnings; // +8A8
 		int nSubClassWinnings; // +8AC
 		int nCrashWinnings; // +8B0
