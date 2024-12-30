@@ -28,6 +28,19 @@
 #include "fo2helpers.h"
 #include "fo2hooks.h"
 
+uintptr_t CheckFileIntegrity_call = 0x552FE0;
+void __attribute__((naked)) __fastcall CheckFileIntegrity(void* a1, const char* a2) {
+	__asm__ (
+		"mov ebx, ecx\n\t"
+		"push edx\n\t"
+		"call %0\n\t"
+		"add esp, 4\n\t"
+		"ret\n\t"
+			:
+			: "m" (CheckFileIntegrity_call)
+	);
+}
+
 auto& pLoadingScreen = *(void**)0x8E8448;
 
 auto gPalette = (uint32_t*)0x8DD040;
