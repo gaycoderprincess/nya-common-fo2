@@ -21,6 +21,8 @@ public:
 		void* valuePtr;
 	};
 
+	static inline auto& gNodes = *(LiteDb**)0x8DA728;
+
 	virtual void _vf0() = 0;
 	virtual void AddMappedTable(const char* name, tMappedValue* values, int flags, int a4) = 0; // flags and a4 usually 2 0
 	virtual LiteDb* GetTable_2(const char* name) = 0; // this jumps to GetTable if name isn't null

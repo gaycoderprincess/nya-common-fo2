@@ -97,11 +97,14 @@ public:
 	uint32_t nGameState; // +458
 	uint8_t _45C[0x8];
 	tPreRace PreRace; // +464
-	uint8_t _4AC[0x14];
+	uint8_t _4AC[0x10];
+	int nNitroRegen; // +4BC
 	tPostRace PostRace;
 	uint8_t _5F4[0x220];
 	tAwards Awards; // +814
-	uint8_t _900[0xB8];
+	uint8_t _900[0x38];
+	uint32_t nIsInReplay; // +938
+	uint8_t _93C[0x7C];
 	PlayerHost* pHost; // +9B8
 	uint8_t _9BC[0xC];
 	MenuInterface* pMenuInterface; // +9C8

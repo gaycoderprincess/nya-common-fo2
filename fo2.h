@@ -23,6 +23,7 @@
 #include "types/Language.h"
 #include "types/EventManager.h"
 #include "types/GameSettings.h"
+#include "types/BfsManager.h"
 
 #include "fo2helpers.h"
 #include "fo2hooks.h"

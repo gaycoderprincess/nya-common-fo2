@@ -27,7 +27,9 @@ public:
 	uint32_t nCurrentLap; // +488
 	uint8_t _48C[0x54];
 	uint32_t nGhosting; // +4E0
-	uint8_t _4E4[0x1B8];
+	uint8_t _4E4[0x15C];
+	uint32_t nNitroRegen; // +640
+	uint8_t _644[0x58];
 	uint32_t nSomeFlags; // +69C
 
 	virtual void _vf0() = 0;

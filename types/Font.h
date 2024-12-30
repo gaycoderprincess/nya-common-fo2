@@ -39,9 +39,9 @@ void DrawStringFO2(tNyaStringData data, const wchar_t* string, const char* font)
 	pFont->fScaleY = data.size * nResY / 20.0;
 	pFont->bXRightAlign = data.XRightAlign;
 	pFont->bXCenterAlign = data.XCenterAlign;
-	pFont->nColor.r = data.r;
+	pFont->nColor.r = data.b;
 	pFont->nColor.g = data.g;
-	pFont->nColor.b = data.b;
+	pFont->nColor.b = data.r;
 	pFont->nColor.a = data.a;
 	pFont->fScaleX *= GetAspectRatioInv();
 	Font::Display(pFont, data.x * nResX, data.y * nResY, string);
