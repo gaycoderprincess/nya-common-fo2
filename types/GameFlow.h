@@ -17,6 +17,14 @@ enum eGameState {
 	GAME_STATE_RACE
 };
 
+enum eRaceState {
+	RACE_STATE_TRACKINTRO = 2,
+	RACE_STATE_COUNTDOWN = 7,
+	RACE_STATE_RACING = 8,
+	RACE_STATE_QUITTING = 9,
+	RACE_STATE_WANTSTOQUIT = 11,
+};
+
 class GameFlow {
 public:
 	struct tPreRace {
@@ -109,7 +117,9 @@ public:
 	tPostRace PostRace;
 	uint8_t _5F4[0x220];
 	tAwards Awards; // +814
-	uint8_t _900[0x38];
+	uint8_t _900[0x1C];
+	uint32_t nRaceState; // +91C
+	uint8_t _920[0x18];
 	uint32_t nIsInReplay; // +938
 	uint8_t _93C[0x7C];
 	PlayerHost* pHost; // +9B8
@@ -117,6 +127,8 @@ public:
 	MenuInterface* pMenuInterface; // +9C8
 	uint8_t _9CC[0x614];
 	PlayerProfile Profile; // +FE0
+
+	static inline auto& gPauseMenuUp = *(bool*)(0x8DBC90+0x1A0); // part of a struct
 };
 auto& pGameFlow = *(GameFlow**)0x8E8410;
 
