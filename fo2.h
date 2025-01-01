@@ -28,6 +28,16 @@
 #include "fo2helpers.h"
 #include "fo2hooks.h"
 
+uintptr_t SetTextureFolder_call = 0x54D7F0;
+void __attribute__((naked)) __fastcall SetTextureFolder(const char* path) {
+	__asm__ (
+		"mov eax, ecx\n\t"
+		"jmp %0\n\t"
+			:
+			: "m" (SetTextureFolder_call)
+	);
+}
+
 uintptr_t CheckFileIntegrity_call = 0x552FE0;
 void __attribute__((naked)) __fastcall CheckFileIntegrity(void* a1, const char* a2) {
 	__asm__ (

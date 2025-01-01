@@ -101,7 +101,10 @@ public:
 	uint32_t nGameState; // +458
 	uint8_t _45C[0x8];
 	tPreRace PreRace; // +464
-	uint8_t _4AC[0x10];
+	int nGameRules; // +4AC
+	int nStuntType; // +4B0
+	int nDerbyType; // +4B4
+	int nStuntStartPosition; // +4B8
 	int nNitroRegen; // +4BC
 	tPostRace PostRace;
 	uint8_t _5F4[0x220];

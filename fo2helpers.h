@@ -48,6 +48,12 @@ int GetCarDataID(int dbId) {
 	return matchups[dbId];
 }
 
+std::string GetCarDataPath(int dbId) {
+	auto db = GetLiteDB();
+	auto table = db->GetTable(std::format("FlatOut2.Cars.Car[{}]", dbId).c_str());
+	return (const char*)table->GetPropertyPointer("DataPath");
+}
+
 int GetCarByName(const std::string& name) {
 	auto db = GetLiteDB();
 	int count = GetNumCars();
@@ -86,6 +92,8 @@ int GetNumTracks() {
 }
 
 bool DoesTrackValueExist(int id, const char* name) {
+	if (!DoesTrackExist(id)) return false;
+
 	auto lua = pScriptHost->pLUAStruct->pLUAContext;
 	auto oldtop = lua_gettop(lua);
 
