@@ -29,7 +29,9 @@ public:
 	float vVelocity[3]; // +280
 	uint8_t _28C[0x4];
 	float vAngVelocity[3]; // +290
-	uint8_t _29C[0x330];
+	uint8_t _29C[0x4];
+	float vVelocityGravity[3]; // +2A0
+	uint8_t _2AC[0x320];
 	float fNitro; // +5CC
 	uint8_t _5D0[0x24];
 	Gearbox mGearbox; // +5F4
@@ -38,9 +40,15 @@ public:
 	uint8_t _1990[0x28C];
 	tTextureNode** pTextureNodes; // +1C1C
 	tTextureNode** pTextureNodesEnd; // +1C20
-	uint8_t _1C24[0x7C];
+	uint8_t _1C24[0x28];
+	float fMass; // +1C4C
+	uint8_t _1C50[0x50];
 	uint32_t nHandsId; // +1CA0
-	uint8_t _1CA4[0x94];
+	uint8_t _1CA4[0x18];
+	float vCenterOfDownforce[3]; // +1CBC
+	uint8_t _1CC8[0x38];
+	float fDownforceConst; // +1D00
+	uint8_t _1D04[0x34];
 	float fSuspensionFrontBumpDamp; // +1D38
 	float fSuspensionFrontReboundDamp; // +1D3C
 	uint8_t _1D40[0x3C];

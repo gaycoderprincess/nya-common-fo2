@@ -16,7 +16,8 @@ public:
 	uint32_t nCharacterSkinId; // +350
 	uint8_t _354[0x14];
 	uint32_t nPlayerId; // +368
-	uint8_t _36C[0x8];
+	uint32_t nPlayerType; // +36C
+	uint32_t nStartPosition; // +370
 	uint32_t nStagingEngineRev; // +374
 	uint8_t _378[0x4];
 	uint32_t nIsWrecked; // +37C
@@ -31,6 +32,8 @@ public:
 	uint32_t nNitroRegen; // +640
 	uint8_t _644[0x58];
 	uint32_t nSomeFlags; // +69C
+	uint8_t _6A0[0x2E4];
+	uint32_t nIsDerbyAI; // +984
 
 	virtual void _vf0() = 0;
 	virtual void _vf1() = 0;
