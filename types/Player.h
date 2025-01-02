@@ -35,6 +35,38 @@ public:
 	uint8_t _6A0[0x2E4];
 	uint32_t nIsDerbyAI; // +984
 
+	static inline uintptr_t DrawJoinedGameNotification_call = 0x4BB150;
+	void __attribute__((naked)) __fastcall DrawJoinedGameNotification(const wchar_t* string) {
+		__asm__ (
+			"pushad\n\t"
+			"mov esi, [ecx+0x2D8]\n\t"
+			"mov eax, [ecx+0x3B0]\n\t"
+			"push edx\n\t"
+			"push eax\n\t"
+			"call %0\n\t"
+			"popad\n\t"
+			"ret\n\t"
+				:
+				:  "m" (DrawJoinedGameNotification_call)
+		);
+	}
+
+	static inline uintptr_t DrawLeftGameNotification_call = 0x4BB1E0;
+	void __attribute__((naked)) __fastcall DrawLeftGameNotification(const wchar_t* string) {
+		__asm__ (
+			"pushad\n\t"
+			"mov esi, [ecx+0x2D8]\n\t"
+			"mov eax, [ecx+0x3B0]\n\t"
+			"push edx\n\t"
+			"push eax\n\t"
+			"call %0\n\t"
+			"popad\n\t"
+			"ret\n\t"
+				:
+				:  "m" (DrawLeftGameNotification_call)
+		);
+	}
+
 	virtual void _vf0() = 0;
 	virtual void _vf1() = 0;
 	virtual void _vf2() = 0;
