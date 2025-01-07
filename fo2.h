@@ -24,6 +24,7 @@
 #include "types/EventManager.h"
 #include "types/GameSettings.h"
 #include "types/BfsManager.h"
+#include "types/Track.h"
 
 #include "fo2helpers.h"
 #include "fo2hooks.h"
