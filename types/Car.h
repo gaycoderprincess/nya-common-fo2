@@ -33,7 +33,8 @@ public:
 	float vVelocityGravity[3]; // +2A0
 	uint8_t _2AC[0x320];
 	float fNitro; // +5CC
-	uint8_t _5D0[0x24];
+	float fMaxNitro; // +5D0
+	uint8_t _5D4[0x20];
 	Gearbox mGearbox; // +5F4
 	uint8_t _6B8[0x11D8];
 	Suspension aSuspension[4]; // +1890
