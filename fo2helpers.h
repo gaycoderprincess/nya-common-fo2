@@ -84,11 +84,11 @@ bool DoesTrackExist(int id) {
 }
 
 int GetNumTracks() {
-	int i = 0;
-	while (DoesTrackExist(i+1)) {
-		i++;
+	int count = 0;
+	for (int i = 0; i < 256; i++) {
+		if (DoesTrackExist(i+1)) count = i+1;
 	}
-	return i;
+	return count;
 }
 
 bool DoesTrackValueExist(int id, const char* name) {
@@ -127,8 +127,8 @@ float GetTrackValueNumber(int id, const char* name) {
 	return f;
 }
 
-const char* GetTrackValueString(int id, const char* name) {
-	if (!DoesTrackValueExist(id, name)) return nullptr;
+std::string GetTrackValueString(int id, const char* name) {
+	if (!DoesTrackValueExist(id, name)) return "";
 
 	auto lua = pScriptHost->pLUAStruct->pLUAContext;
 	auto oldtop = lua_gettop(lua);
@@ -146,6 +146,6 @@ const char* GetTrackValueString(int id, const char* name) {
 	return str;
 }
 
-const char* GetTrackName(int id) {
+std::string GetTrackName(int id) {
 	return GetTrackValueString(id, "Name");
 }
